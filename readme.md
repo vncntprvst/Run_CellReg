@@ -5,23 +5,23 @@ Expected naming convention for ROI files is `ROI_xxx.mat`. Or change line 16 in 
 ### Run on the local machine
 Open run_CellReg.m in the Matlab editor.
 
-* Edit parameters
- - data_dir
- - runs
- - microns_per_pixel
+1. _Edit parameters_  
+ `data_dir`  
+ `runs`  
+ `microns_per_pixel`  
 
-* Run the script
-and press F5 or the green arrow.
+2. _Run the script_  
+In the Matlab editor, press `F5` or the green arrow.
 
 ### Run on the cluster
 
-* Edit parameters
-Open run_CellReg.m in an editor (e.g., WinSCP) and edit the following parameters:
- - data_dir
- - runs
- - microns_per_pixel
+1. _Edit parameters_  
+Open run_CellReg.m in an editor (e.g., WinSCP) and edit the following parameters:  
+ `data_dir`  
+ `runs`  
+ `microns_per_pixel`  
 
-* Login to the cluster and navigate to the directory containing the script
+2. _Login to the cluster and navigate to the directory containing the script_  
 ```bash
 ssh cluster
 cd /path/to/Run_CellReg
@@ -31,13 +31,13 @@ Create a slurm_logs directory (need to do this only once)
 mkdir slurm_logs
 ```
 
-* Run the script
+3. _Run the script_  
 ```bash
 sbatch --mail-user=$USER@uni.edu cellreg.sh
 ```
-The email flag is optional.
+The email flag is optional.  
 
-Job output for the example data: 
+Job output for the example data:  
 ```bash
 Job ID: 39048640
 Cluster: openmind7
